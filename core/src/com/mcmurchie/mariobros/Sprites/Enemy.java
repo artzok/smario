@@ -9,7 +9,7 @@ import com.mcmurchie.mariobros.Screens.PlayScreen;
  * Created by adammcmurchie on 05/02/2017.
  */
 
- public abstract class Enemy extends Sprite {
+public abstract class Enemy extends Sprite {
     protected World world;
     protected PlayScreen screen;
     public Body b2body;
@@ -18,7 +18,9 @@ import com.mcmurchie.mariobros.Screens.PlayScreen;
         this.world = screen.getWorld();
         this.screen = screen;
         setPosition(x, y);
+        defineEnemy();
     }
 
     protected abstract void defineEnemy();
+
 }
